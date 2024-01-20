@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-Bold.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-Bold.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-Bold.woff') format('woff'),
+       url('@/assets/fonts/Larken-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-BoldItalic.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-BoldItalic.woff') format('woff'),
+       url('@/assets/fonts/Larken-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-ExtraBold.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-ExtraBold.woff') format('woff'),
+       url('@/assets/fonts/Larken-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-Italic.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-Italic.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-Italic.woff') format('woff'),
+       url('@/assets/fonts/Larken-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-Regular.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-Regular.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-Regular.woff') format('woff'),
+       url('@/assets/fonts/Larken-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-Light.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-Light.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-Light.woff') format('woff'),
+       url('@/assets/fonts/Larken-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Larken';
+  src: url('@/assets/fonts/Larken-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('@/assets/fonts/Larken-LightItalic.ttf') format('truetype'),
+       url('@/assets/fonts/Larken-LightItalic.woff') format('woff'),
+       url('@/assets/fonts/Larken-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
