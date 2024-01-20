@@ -1,0 +1,24 @@
+{
+  "name": "jus-mundi-lata",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev -o",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/tailwindcss": "^6.10.4",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.3",
+    "vue": "^3.4.14",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "nuxt-swiper": "^1.2.2"
+  }
+}
