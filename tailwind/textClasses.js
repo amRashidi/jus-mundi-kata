@@ -65,6 +65,13 @@ const titleClasses = {
     fontSize: fontSize[87],
     fontFamily: Lato,
     letterSpacing: '2px'
+  },
+
+  qoute: {
+    fontWeight: regular,
+    lineHeight: lineHeight[20],
+    fontSize: fontSize[100],
+    fontFamily: Larken
   }
 }
 
