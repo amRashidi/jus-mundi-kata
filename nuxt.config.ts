@@ -15,5 +15,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/eslint-module',
     'nuxt-swiper'
+  ],
+  components: [
+    { path: '~/components/dls', prefix: 'v' },
+    '~/components'
   ]
 })
