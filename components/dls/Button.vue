@@ -11,7 +11,8 @@ import type IconList from '~/assets/icons'
 interface IProps {
   variant: 'main' | 'link';
   color: 'primary' | 'secondary' | 'simple';
-  size: 'sm' | 'nl' | 'md',
+  size?: 'sm' | 'nl' | 'md',
+  disabled?: boolean;
   to?: RouteLocationRaw | null;
   icon?: keyof typeof IconList | null;
 }
@@ -20,6 +21,7 @@ const props = withDefaults(defineProps<IProps>(), {
   variant: 'main',
   color: 'primary',
   size: 'nl',
+  disabled: false,
   to: null,
   icon: null
 })
@@ -30,7 +32,9 @@ const classes = computed(() => ([
   'v-btn',
   `v-btn__${props.size}`,
   `v-btn__${props.variant}`,
-  `v-btn__${props.color}`
+  `v-btn__${props.color}`, {
+    'v-btn--disabled': props.disabled
+  }
 ]))
 
 const attributes = computed(() => ({
@@ -65,6 +69,12 @@ const attributes = computed(() => ({
   }
   &__secondary {
     @apply bg-white text-black-light;
+  }
+  &__simple {
+    @apply bg-transparent;
+  }
+  &--disabled {
+    @apply pointer-events-auto;
   }
 }
 

@@ -22,7 +22,8 @@ module.exports = {
         light: '#818487',
         dark: '#F4F6F8'
       },
-      flue: '#6AD300'
+      flue: '#6AD300',
+      transparent: 'transparent'
     },
     screens: {
       sm: '100%',
