@@ -70,5 +70,11 @@ describe('styles', () => {
   it('should render correctly with disabled attr', () => {
     const button = btnFactory({ disabled: true })
     expect(button.classes()).toContain('v-btn--disabled')
+    expect(button.attributes()).toContain('disabled')
+  })
+
+  it('should render correctly with dense style', () => {
+    const button = btnFactory({ dense: true })
+    expect(button.classes()).toContain('v-btn--dense')
   })
 })

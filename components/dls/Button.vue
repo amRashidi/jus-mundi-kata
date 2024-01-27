@@ -13,6 +13,7 @@ interface IProps {
   color: 'primary' | 'secondary' | 'simple';
   size?: 'sm' | 'nl' | 'md',
   disabled?: boolean;
+  dense?: boolean;
   to?: RouteLocationRaw | null;
   icon?: keyof typeof IconList | null;
 }
@@ -21,6 +22,7 @@ const props = withDefaults(defineProps<IProps>(), {
   variant: 'main',
   color: 'primary',
   size: 'nl',
+  dense: false,
   disabled: false,
   to: null,
   icon: null
@@ -33,7 +35,8 @@ const classes = computed(() => ([
   `v-btn__${props.size}`,
   `v-btn__${props.variant}`,
   `v-btn__${props.color}`, {
-    'v-btn--disabled': props.disabled
+    'v-btn--disabled': props.disabled,
+    'v-btn--dense': props.dense
   }
 ]))
 
@@ -44,7 +47,7 @@ const attributes = computed(() => ({
 }))
 </script>
 
-<style lang="scss">
+<style lang="postcss">
 
 .v-btn {
   @apply inline-flex items-center gap-4 uppercase;
@@ -61,7 +64,7 @@ const attributes = computed(() => ({
     @apply rounded shadow-cta text-cta-bold;
   }
   &__link {
-    @apply underline;
+    @apply underline text-body-sm;
   }
   &__primary {
     @apply bg-primary-light text-white;
@@ -75,6 +78,9 @@ const attributes = computed(() => ({
   }
   &--disabled {
     @apply pointer-events-auto;
+  }
+  &--dense {
+    @apply p-0
   }
 }
 
