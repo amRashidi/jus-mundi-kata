@@ -18,8 +18,3 @@ interface Props {
 }
 defineProps<Props>()
 </script>
-<style lang="postcss" scoped>
-.v-slider {
-  @apply py-16 w-full;
-}
-</style>

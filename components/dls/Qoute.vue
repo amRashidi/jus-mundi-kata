@@ -11,17 +11,3 @@
     </div>
   </blockquote>
 </template>
-
-<style lang="postcss" scoped>
-.v-qoute {
-  @apply flex justify-center gap-8 items-center;
-  &__content {
-    @apply text-qoute max-w-[640px] italic;
-    font-kerning: none;
-    font-feature-settings: 'liga' off;
-  }
-  &__icon {
-    @apply text-primary-light;
-  }
-}
-</style>

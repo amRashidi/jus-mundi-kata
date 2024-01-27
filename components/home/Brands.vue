@@ -5,7 +5,7 @@
     </div>
     <div class="grid grid-rows-2 grid-cols-6 gap-16 mt-16">
       <div v-for="brand in brands" :key="brand.name">
-        <img :src="brand.image" :alt="brand.name" class="object-fit">
+        <img :src="brand.image" :alt="brand.name" class="object-fit" loading="lazy">
       </div>
     </div>
   </section>

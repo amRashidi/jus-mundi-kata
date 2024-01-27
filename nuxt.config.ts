@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    '@/assets/styles/main.css'
+    '@/assets/styles/main.css',
+    '@/assets/styles/dls.css'
   ],
   modules: [
     '@nuxtjs/tailwindcss',
@@ -22,7 +23,7 @@ export default defineNuxtConfig({
     '~/components'
   ],
   swiper: {
-    styleLang: 'scss',
+    styleLang: 'css',
     modules: ['autoplay']
   }
 })

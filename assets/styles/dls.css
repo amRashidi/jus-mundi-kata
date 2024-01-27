@@ -1,0 +1,98 @@
+.v-author {
+  @apply flex gap-8 justify-center;
+  &__avatar {
+    @apply w-12 h-12 rounded-full;
+  }
+  &__content {
+    @apply text-body-md text-center flex-1;
+  }
+}
+.v-btn {
+  @apply inline-flex items-center gap-4 uppercase;
+  &__md {
+    @apply px-8 py-5;
+  }
+  &__nl {
+    @apply p-4;
+  }
+  &__sm {
+    @apply p-2;
+  }
+  &__main {
+    @apply rounded shadow-cta text-cta-bold;
+  }
+  &__link {
+    @apply underline text-body-sm;
+  }
+  &__primary {
+    @apply bg-primary-light text-white;
+  }
+  &__secondary {
+    @apply bg-white text-black-light;
+  }
+  &__simple {
+    @apply bg-transparent;
+  }
+  &--disabled {
+    @apply pointer-events-auto;
+  }
+  &--dense {
+    @apply p-0;
+  }
+}
+
+.v-card {
+  &--mini {
+    @apply bg-white p-2;
+  }
+}
+
+.v-icon {
+  color: inherit;
+  > svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.v-qoute {
+  @apply flex justify-center gap-8 items-center;
+  &__content {
+    @apply text-qoute max-w-[640px] italic;
+    font-kerning: none;
+    font-feature-settings: 'liga' off;
+  }
+  &__icon {
+    @apply text-primary-light;
+  }
+}
+
+.v-slider {
+  @apply !py-16 w-full;
+}
+
+.v-stick {
+  @apply bg-flue block shrink-0;
+  &--h {
+    @apply w-6 h-0.5;
+  }
+  &--v {
+    @apply h-6 w-0.5;
+  }
+  &--s {
+    @apply w-6 h-0.5 rotate-45;
+  }
+}
+
+.v-text-block {
+  @apply py-8 text-center;
+  &__image {
+    @apply w-12 h-12 mx-auto;
+  }
+  &__title {
+    @apply text-title-xs mt-4;
+  }
+  &__desc {
+    @apply text-body-md mt-2 mb-0;
+  }
+}

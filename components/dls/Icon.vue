@@ -18,13 +18,3 @@ watch(name, async (next) => {
   icon.value = next && (await $icons?.[next]?.())
 }, { immediate: true, flush: 'sync' })
 </script>
-
-<style lang='scss'>
-.v-icon {
-  color: inherit;
-  > svg {
-    width: inherit;
-    height: inherit;
-  }
-}
-</style>

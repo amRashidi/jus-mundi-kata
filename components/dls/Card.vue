@@ -17,10 +17,3 @@ const classes = computed(() => ({
   'v-card--mini': props.variant === 'mini'
 }))
 </script>
-<style lang="postcss" scoped>
-.v-card {
-  &--mini {
-    @apply bg-white p-2;
-  }
-}
-</style>
