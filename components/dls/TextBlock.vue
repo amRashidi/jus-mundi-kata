@@ -1,10 +1,10 @@
 <template>
   <v-card class="text-block">
-    <img class="text-block____image" :src="image" :alt="title">
-    <h5 class="text-block____title">
+    <img class="text-block__image" :src="image" :alt="title">
+    <h5 class="text-block__title">
       {{ title }}
     </h5>
-    <p class="text-block____desc">
+    <p class="text-block__desc">
       {{ description }}
     </p>
   </v-card>
@@ -22,8 +22,9 @@ defineProps<Props>()
 
 <style lang="postcss" scoped>
 .text-block {
+  @apply py-8 text-center;
   &__image {
-    @apply w-10 h-10;
+    @apply w-12 h-12 mx-auto;
   }
   &__title {
     @apply text-title-xs mt-4;
