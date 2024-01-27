@@ -43,7 +43,8 @@ module.exports = {
         mono: ['Lato']
       },
       boxShadow: {
-        cta: '0px 8px 32px 0px rgba(37, 79, 109, 0.24)'
+        cta: '0px 8px 32px 0px rgba(37, 79, 109, 0.24)',
+        slide: '0px 0px 64px 0px rgba(0, 0, 0, 0.10)'
       }
     }
   },
