@@ -37,6 +37,13 @@ const titleClasses = {
     fontFamily: IBM
   },
 
+  'body-semi': {
+    fontWeight: bold,
+    lineHeight: lineHeight[15],
+    fontSize: fontSize[100],
+    fontFamily: IBM
+  },
+
   'body-md': {
     fontWeight: regular,
     lineHeight: lineHeight[15],

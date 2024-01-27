@@ -1,13 +1,13 @@
 <template>
   <blockquote class="v-qoute">
-    <div class="self-start">
-      <v-icon name="quote-start" class="v-qoute__icon" />
+    <div class="self-start flex-1">
+      <v-icon name="quote-start" size="7" class="v-qoute__icon" />
     </div>
     <p class="v-qoute__content">
       <slot />
     </p>
-    <div class="self-end">
-      <v-icon name="quote-end" class="v-qoute__icon" />
+    <div class="self-end flex-1">
+      <v-icon name="quote-end" size="7" class="v-qoute__icon" />
     </div>
   </blockquote>
 </template>
@@ -21,7 +21,7 @@
     font-feature-settings: 'liga' off;
   }
   &__icon {
-    @apply w-7 h-5 text-primary-light;
+    @apply text-primary-light;
   }
 }
 </style>
