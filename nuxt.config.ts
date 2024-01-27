@@ -4,7 +4,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
-        { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' }
+        { rel: 'preconnect', as: 'style', href: 'https://fonts.googleapis.com' }
       ]
     }
   },
@@ -20,5 +20,9 @@ export default defineNuxtConfig({
   components: [
     { path: '~/components/dls', prefix: 'v' },
     '~/components'
-  ]
+  ],
+  swiper: {
+    styleLang: 'scss',
+    modules: ['autoplay']
+  }
 })
