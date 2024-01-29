@@ -1,6 +1,5 @@
-<!-- eslint-disable vue/no-v-html -->
 <template>
-  <i v-if="icon" :class="['v-icon', iconSize]" v-html="icon" />
+  <component :is="component" />
 </template>
 
 <script setup lang='ts'>
@@ -14,17 +13,14 @@ const name = toRef(props, 'name')
 const { $icons } = useNuxtApp()
 const iconSize = computed(() => `w-${props.size || '4'} h-${props.size || '4'}`)
 const icon = ref('')
+const component = computed(() => {
+  if (!props.name) { return null }
+  return h('i', {
+    class: ['v-icon', iconSize.value],
+    innerHTML: icon.value
+  })
+})
 watch(name, async (next) => {
   icon.value = next && (await $icons?.[next]?.())
 }, { immediate: true, flush: 'sync' })
 </script>
-
-<style lang='scss'>
-.v-icon {
-  color: inherit;
-  > svg {
-    width: inherit;
-    height: inherit;
-  }
-}
-</style>

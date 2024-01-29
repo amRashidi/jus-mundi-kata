@@ -13,6 +13,7 @@ interface IProps {
   color: 'primary' | 'secondary' | 'simple';
   size?: 'sm' | 'nl' | 'md',
   disabled?: boolean;
+  dense?: boolean;
   to?: RouteLocationRaw | null;
   icon?: keyof typeof IconList | null;
 }
@@ -21,6 +22,7 @@ const props = withDefaults(defineProps<IProps>(), {
   variant: 'main',
   color: 'primary',
   size: 'nl',
+  dense: false,
   disabled: false,
   to: null,
   icon: null
@@ -33,49 +35,15 @@ const classes = computed(() => ([
   `v-btn__${props.size}`,
   `v-btn__${props.variant}`,
   `v-btn__${props.color}`, {
-    'v-btn--disabled': props.disabled
+    'v-btn--disabled': props.disabled,
+    'v-btn--dense': props.dense
   }
 ]))
 
 const attributes = computed(() => ({
   role: props.to ? 'link' : 'button',
+  disabled: props.disabled || undefined,
   to: props.to,
   class: classes.value
 }))
 </script>
-
-<style lang="scss">
-
-.v-btn {
-  @apply inline-flex items-center gap-4 uppercase;
-  &__md {
-    @apply px-8 py-5;
-  }
-  &__nl {
-    @apply p-4;
-  }
-  &__sm {
-    @apply p-2;
-  }
-  &__main {
-    @apply rounded shadow-cta text-cta-bold;
-  }
-  &__link {
-    @apply underline;
-  }
-  &__primary {
-    @apply bg-primary-light text-white;
-
-  }
-  &__secondary {
-    @apply bg-white text-black-light;
-  }
-  &__simple {
-    @apply bg-transparent;
-  }
-  &--disabled {
-    @apply pointer-events-auto;
-  }
-}
-
-</style>
