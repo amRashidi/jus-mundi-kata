@@ -31,5 +31,9 @@
   },
   "dependencies": {
     "nuxt-swiper": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
   }
 }
