@@ -1,1 +1,17 @@
 @import url('./fonts.css');
+@tailwind base;
+@layer base {
+  html {
+    @apply text-black-light;
+  } 
+  .app {
+    &_header {
+      @apply flex justify-between items-center container h-20 absolute top-8 right-0 left-0;
+    }
+    &_main {
+      @apply mt-8;
+    }
+  }
+}
+@tailwind components;
+@tailwind utilities;

@@ -1,16 +1,11 @@
-import plugin from 'tailwindcss/plugin'
-import {
-  fontFamily,
-  fontWeight,
-  fontSize,
-  lineHeight
-} from './tailwind/variables'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const plugin = require('tailwindcss/plugin')
+const {
+  fontFamily: { Larken, IBM, Lato }, fontWeight: { regular, medium, bold, extraBold }, fontSize
+  , lineHeight
+} = require('./variables')
 
 const classPrefix = 'text-'
-
-const { Larken, IBM, Lato } = fontFamily
-const { regular, medium, bold, extraBold } = fontWeight
-
 const titleClasses = {
   'title-xxl': {
     fontWeight: extraBold,
@@ -57,7 +52,7 @@ const titleClasses = {
     letterSpacing: '2px'
   },
 
-  cta: {
+  'cta-main': {
     fontWeight: medium,
     fontSize: fontSize[87],
     fontFamily: Lato,
@@ -70,17 +65,23 @@ const titleClasses = {
     fontSize: fontSize[87],
     fontFamily: Lato,
     letterSpacing: '2px'
+  },
+
+  qoute: {
+    fontWeight: regular,
+    lineHeight: lineHeight[20],
+    fontSize: fontSize[100],
+    fontFamily: Larken
   }
 }
 
 const addPrefix = classes =>
   Object.fromEntries(Object.entries(classes).map(([key, value]) => [`.${classPrefix}${key}`, value]))
 
-export default {
+module.exports = {
   ...plugin(({ addComponents }) =>
     addComponents({
       ...addPrefix(titleClasses)
     })
-  ),
-  titleClasses
+  )
 }
