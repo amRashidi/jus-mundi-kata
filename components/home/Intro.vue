@@ -3,26 +3,26 @@
     <div class="intro__main">
       <ClientOnly>
         <div class="intro__parts">
-          <v-animate ckey="icc" animation="circle">
+          <v-animate animation="circle">
             <HomePartsICC class="intro__icc" />
           </v-animate>
-          <v-animate ckey="logo" animation="slideleft" :delay="1000">
+          <v-animate animation="slideleft" :delay="1000">
             <HomePartsLogo />
           </v-animate>
-          <v-animate ckey="mask" animation="fade" :delay="1500" class="intro__case" />
+          <v-animate animation="fade" :delay="1500" class="intro__case" />
         </div>
         <div class="intro__texts">
-          <v-animate ckey="title" animation="slideup" :delay="1500">
+          <v-animate animation="slideup" :delay="1500">
             <h1 class="text-title-xxl">
               {{ title }}
             </h1>
           </v-animate>
-          <v-animate ckey="subtitle" animation="slideup" :delay="2500">
+          <v-animate animation="slideup" :delay="2500">
             <p class="text-body-lg mt-8">
               {{ subtitle }}
             </p>
           </v-animate>
-          <v-animate ckey="button" animation="slideup" :delay="3000">
+          <v-animate animation="slideup" :delay="3000">
             <v-button
               variant="main"
               color="primary"

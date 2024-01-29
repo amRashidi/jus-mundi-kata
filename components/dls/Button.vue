@@ -42,6 +42,7 @@ const classes = computed(() => ([
 
 const attributes = computed(() => ({
   role: props.to ? 'link' : 'button',
+  disabled: props.disabled || undefined,
   to: props.to,
   class: classes.value
 }))

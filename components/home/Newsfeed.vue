@@ -7,7 +7,7 @@
       {{ title }}
     </h2>
     <ClientOnly>
-      <v-animate ckey="slides" animation="slideleft" :delay="100">
+      <v-animate animation="slideleft" :delay="100">
         <v-slider :slides="items" class="mt-4 px-16">
           <template #slide="{slide}">
             <v-card variant="mini" class="h-32 rounded-lg shadow-slide text-start">

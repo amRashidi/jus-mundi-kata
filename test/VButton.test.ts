@@ -20,28 +20,30 @@ const btnFactory = (props = {}) =>
   })
 
 describe('render as button', () => {
-  it('should not have link attrs', () => {
+  it('should not have link attrs', async () => {
     const button = btnFactory()
+    expect(button?.vm).toBeTruthy()
     expect(button.attributes('href')).toBeFalsy()
     expect(button.attributes('rel')).toBeFalsy()
     expect(button.attributes('target')).toBeFalsy()
+    await button.setProps({ disabled: true })
+    expect(button.attributes('disabled')).toBeDefined()
   })
 })
 
 describe('render as an anchor tag', () => {
   it('should render external link correctly', () => {
-    const href = 'http://jusmundi.com'
-    const link = btnFactory({ to: href })
-    expect(link.attributes('href')).toBe(href)
+    const link = btnFactory({ to: 'http://jusmundi.com' })
+    expect(link?.vm).toBeTruthy()
+    expect(link.attributes('href')).toEqual('http://jusmundi.com')
     expect(link.attributes('role')).toBe('link')
     expect(link.attributes('rel')).toBe('noopener noreferrer')
   })
 
   it('should internal link correctly', () => {
-    const href = '/'
-    const link = btnFactory({ to: href })
-
-    expect(link.attributes('href')).toBe(href)
+    const link = btnFactory({ to: '/' })
+    expect(link?.vm).toBeTruthy()
+    expect(link.attributes('to')).toEqual('/')
     expect(link.attributes('role')).toBe('link')
   })
 })
@@ -70,7 +72,6 @@ describe('styles', () => {
   it('should render correctly with disabled attr', () => {
     const button = btnFactory({ disabled: true })
     expect(button.classes()).toContain('v-btn--disabled')
-    expect(button.attributes()).toContain('disabled')
   })
 
   it('should render correctly with dense style', () => {

@@ -13,12 +13,10 @@
 interface Props {
   animation: string;
   delay: number;
-  ckey: string;
 }
 const props = withDefaults(defineProps<Props>(), {
   animation: 'fade',
-  delay: 0,
-  ckey: ''
+  delay: 0
 })
 const target = ref()
 const animate = ref(false)

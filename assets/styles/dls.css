@@ -34,7 +34,7 @@
     @apply bg-transparent;
   }
   &--disabled {
-    @apply pointer-events-auto;
+    @apply opacity-45 pointer-events-none;
   }
   &--dense {
     @apply p-0;
