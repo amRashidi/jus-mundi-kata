@@ -9,6 +9,9 @@
   </div>
 </template>
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Home | Jus Mundi'
+})
 const intro = {
   title: 'A Unique Partnership for the Publication of ICC Arbitration Awards',
   subtitle: 'The International Chamber of Commerce (ICC) & Jus Mundi have joined forces to make ICC Arbitration Awards and related materials freely available to the global legal community.',

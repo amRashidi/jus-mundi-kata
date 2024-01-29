@@ -1,9 +1,12 @@
 <template>
   <Swiper
+    centered-slides-bounds
+    centered-slides
+    center-insufficient-slides
     :slides-per-view="4.2"
     :space-between="24"
     :autoplay="{
-      delay: 5000,
+      delay: 2500,
     }"
     class="v-slider"
   >
@@ -14,7 +17,7 @@
 </template>
 <script setup lang="ts">
 interface Props {
-  slides: Array<unknown>
+  slides: Array<Object>
 }
 defineProps<Props>()
 </script>

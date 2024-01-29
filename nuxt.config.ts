@@ -4,7 +4,8 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
-        { rel: 'preconnect', as: 'style', href: 'https://fonts.googleapis.com' }
+        { rel: 'preconnect', as: 'style', href: 'https://fonts.googleapis.com' },
+        { rel: 'icon', type: 'image/x-icon', href: 'https://cdn.jusmundi.com/_fs/img/favicon.ico' }
       ]
     }
   },
